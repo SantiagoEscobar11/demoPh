@@ -9,13 +9,6 @@ Route::get('/', function () {
 });
 
 
-
-Route::get('/user/{id}', function (string $id) {
-    $users = DB::table('gbl_entity')->get();
-
-    return new PacienteResource($users);
-});
-
 Route::get('/informe/{id}', function (int $id) {
 
 try {
